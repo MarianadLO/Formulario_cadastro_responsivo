@@ -101,8 +101,8 @@ body{
 }
 
 .input-box input{
-    margin: 0.4rem 0;
-    padding: 0.7rem 0.3rem;
+    margin: 0.25rem 0;
+    padding: 0.55rem 0.3rem;
     border: none;
     border-radius: 10px;
     box-shadow: 1px 1px 6px #00000092;
@@ -118,7 +118,7 @@ body{
 
 .input-box label,
 .gender-title h6{
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: #000000c0;
 }
@@ -144,17 +144,17 @@ body{
 }
 
 .gender-input label{
-    font-size: 0.81rem;
+    font-size: 0.87rem;
     font-weight: 600;
     color: #000000c0;
 }
 
 .continue-button button{
     width: 100%;
-    margin-top: 0.9rem;
+    margin-top: 1.1rem;
     border: none;
     background-color: #6c63ff;
-    padding: 0.5rem;
+    padding: 0.7rem;
     border-radius: 5px;
     cursor: pointer;
 }
