@@ -48,6 +48,7 @@ body{
 
 .form-header{
     margin-bottom: 1.5rem;
+    padding-top: 1rem;
     display: flex;
     justify-content: space-between;
 }
@@ -90,7 +91,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0.7rem 0;
+    padding: 0.7rem 0 0.3rem 0;
 }
 
 .input-box{ /*colocand o flex-direction só nas div uma de cada input, se colocar na div que engloba, não funciona*/
@@ -129,7 +130,7 @@ body{
 .gender-group{
     display: flex;
     justify-content: space-between;
-    margin-top: 0.7rem;
+    margin-top: 0.5rem;
     padding: 0 0.1rem;
 }
 
@@ -150,10 +151,10 @@ body{
 
 .continue-button button{
     width: 100%;
-    margin-top: 2.5rem;
+    margin-top: 0.9rem;
     border: none;
     background-color: #6c63ff;
-    padding: 0.6rem;
+    padding: 0.5rem;
     border-radius: 5px;
     cursor: pointer;
 }
