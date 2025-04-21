@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    width: 100%; /*pega a largura inteira da página*/
+    height: 100vh; /*pega a altura inteira da página*/
+    display: flex; /*deixa as div todas no centro*/
+    justify-content: center;
+    align-items: center;
+    background: #0c0ce968;
+}
+
+.container{
+    width: 80%;
+    height: 80vh;
+    display: flex; /*deixa as div que estão dentro deste container principal um ao lado do outro*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.417);
+}
+
+.form-image{ /*tratando agora de cada div separadamente, div onde está a imagem*/
+    width: 50%; /*a imagem pega 50% da div que pega dos 80%*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #edd59dac;
+    padding: 1rem;
+}
+
+.form-image img{
+    width: 28rem;
+}
+
+.form{ /*tratando agora da div do formulário*/
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 2rem; /*padding da div que engloba os inputs é importante para deixar um do lado do outro*/
+}
+
+.form-header{
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-button{
+    display: flex;
+    align-items: center;
+}
+
+.login-button button{
+    border: none;
+    background-color: #6c63ff;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button button:hover{
+    background-color: #6b63ffc3;
+}
+
+.login-button button a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+.form-header h1::after { /*colocar o traço abaixo do h1 do header*/
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 0.2rem;
+    background-color: #6c63ff;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group{ /*tratand da div dos inputs*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.7rem 0;
+}
+
+.input-box{ /*colocand o flex-direction só nas div uma de cada input, se colocar na div que engloba, não funciona*/
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.input-box input{
+    margin: 0.4rem 0;
+    padding: 0.7rem 0.3rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #00000092;
+}
+
+.input-box input:hover{
+    background-color: #cac8c873;
+}
+
+.input-box input:focus-visible{ /*mudar a cor da borda*/
+    outline: 1px solid #6c63ff;
+}
+
+.input-box label,
+.gender-title h6{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder{ /*cor das palavras do placeholder*/
+    color: #000000be;
+}
+
+.gender-group{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.7rem;
+    padding: 0 0.1rem;
+}
+
+.gender-input{
+    display: flex;
+    align-items: center;
+}
+
+.gender-input input{
+    margin-right: 0.3rem;
+}
+
+.gender-input label{
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.continue-button button{
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: #6c63ff;
+    padding: 0.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button button:hover{
+    background-color: #6b63ffc3;
+}
+
+.continue-button button a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+/*deixando responsivo*/
+
+@media screen and (max-width: 1218px){ /*primeira etapa de diminuição*/
+    .form-image{ /*tirando a imagem quando diminuir*/
+        display: none;
+    }
+
+    .container{
+        width: 50%;
+    }
+    .form{
+        width: 100%; /*vai ter 100% dos 50%*/
+    }
+}
+
+@media screen and (max-width: 925px){
+    .container{
+        width: 90%;
+        height: auto; /*va ficar um embaixo do outro e vai aparece uma brra de rolagem*/
+    }
+    .input-group{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+    }
+    .gender-inputs{
+        margin-top: 2rem;
+    }
+    .gender-group{
+        flex-direction: column;
+    }
+    .gender-input{
+        margin-top: 0.3rem;
+    }
+}
